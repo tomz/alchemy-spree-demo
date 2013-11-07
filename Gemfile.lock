@@ -26,6 +26,15 @@ GIT
       tvdeyen-handles_sortable_columns (~> 0.1.5)
 
 GIT
+  remote: git://github.com/magiclabs/alchemy_spree.git
+  revision: 088784a0d96b5d43cad175109d177c6845486be9
+  branch: 0.2-stable
+  specs:
+    alchemy_spree (0.2.0)
+      alchemy_cms (~> 2.7.0)
+      spree (~> 2.0.0)
+
+GIT
   remote: git://github.com/tvdeyen/spree.git
   revision: 55a4b0d162a69f493e9abd6fc7f108a49cc2950c
   branch: alchemy
@@ -79,13 +88,6 @@ GIT
       stringex (~> 1.5.1)
     spree_sample (2.0.7.beta)
       spree_core (= 2.0.7.beta)
-
-PATH
-  remote: ../../ruby/gems/alchemy_spree
-  specs:
-    alchemy_spree (0.2.0)
-      alchemy_cms (~> 2.7.0)
-      spree (~> 2.0.0)
 
 GEM
   remote: https://rubygems.org/
