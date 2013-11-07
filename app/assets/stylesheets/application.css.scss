@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require foundation_and_overrides
+ *= require_self
+ */
+
+form.button_to {
+  display: inline-block;
+}
+
+.product-teaser {
+
+  > a {
+    display: block;
+    height: 198px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  > .panel {
+    height: 130px;
+    overflow: hidden;
+  }
+}
+
+[class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
+
+[data-section='']:not([data-section-resized]):not([data-section-small-style]),
+[data-section='auto']:not([data-section-resized]):not([data-section-small-style]),
+.section-container.auto:not([data-section-resized]):not([data-section-small-style]) {
+  visibility: visible !important;
+}

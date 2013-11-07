@@ -1,0 +1,41 @@
+<% product = element.ingredient(:product) %>
+
+<% if product %>
+<div class="large-6 columns">
+  <% image = product_images(product) %>
+  <% if image && image.attachment %>
+    <%= link_to [spree, product] do %>
+      <%= image_tag image.attachment.url(:product) %><br>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="large-6 columns">
+  <h3 class="show-for-small"><%= product.name %><hr/></h3>
+
+  <div class="panel">
+    <h4 class="hide-for-small"><%= product.name %><hr/></h4>
+    <h5 class="subheader">
+      <%= product.description %>
+    </h5>
+  </div>
+
+  <div class="row">
+    <div class="large-6 small-6 columns">
+      <div class="panel">
+        <h5>Header</h5>
+      <h6 class="subheader">Praesent placerat dui tincidunt elit suscipit sed.</h6>
+      <a href="#" class="small button">BUTTON TIME!</a>
+      </div>
+    </div>
+
+    <div class="large-6 small-6 columns">
+      <div class="panel">
+        <h5>Header</h5>
+      <h6 class="subheader">Praesent placerat dui tincidunt elit suscipit sed.</h6>
+      <a href="#" class="small button">BUTTON TIME!</a>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
