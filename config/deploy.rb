@@ -2,11 +2,10 @@ require 'bundler/capistrano'
 require 'alchemy/capistrano'
 
 # application name
-set :application,               "spree-alchemy-demo"
+set :application,               "alchemy-spree-demo"
 
 # ssh settings
-set :user,                      "gucci"
-set :port,                      22044
+set :user,                      "rails4"
 
 # domain names
 role :app,                      "alchemy-cms.com"
@@ -14,12 +13,12 @@ role :web,                      "alchemy-cms.com"
 role :db,                       "alchemy-cms.com", :primary => true
 
 # the webserver path
-set :deploy_to,                 "/var/www/#{application}/"
+set :deploy_to,                 "/var/www/#{application}"
 set :deploy_via,                :remote_cache
 
 # repository settings
 set :scm,                       "git"
-set :repository,                "git@github.com/magiclabs/spree-alchemy-demo.git"
+set :repository,                "git://github.com/magiclabs/#{application}.git"
 set :branch,                    "master"
 
 # rails env
