@@ -27,12 +27,13 @@ set :rails_env,                 "production"
 # before hooks
 before 'deploy',                'deploy:web:disable'
 before "deploy:start",          "deploy:seed"
-# before "deploy:migrate",        "alchemy:db:dump"
+before "deploy:create_symlink", "demo:reset"
 before "deploy:create_symlink", "deploy:migrate"
 
 # after hooks
 after "deploy:setup",           "alchemy:database_yml:create"
 after "deploy:finalize_update", "alchemy:database_yml:symlink"
+after "deploy:finalize_update", "secret_token:symlink"
 after "deploy:create_symlink",  "spree:images:symlink"
 after "deploy",                 "deploy:web:enable"
 after "deploy",                 "deploy:cleanup"
@@ -47,6 +48,25 @@ namespace :spree do
       run "ln -nfs #{shared_path}/spree #{current_path}/public/"
     end
   end
+end
+
+namespace :demo do
+
+  desc 'Resets the database to default demo content'
+  task :reset do
+    run "cd #{release_path} && RAILS_ENV=#{rails_env} #{rake} demo:reset"
+  end
+
+end
+
+namespace :secret_token do
+
+  desc 'Symlink the secret token from shared folder into app.'
+  task :symlink do
+    run "rm #{release_path}/config/initializers/secret_token.rb"
+    run "ln -s #{shared_path}/config/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
+  end
+
 end
 
 namespace :log do
