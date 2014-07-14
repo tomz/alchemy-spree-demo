@@ -13,6 +13,10 @@
   - name: taxon
     type: EssenceSpreeTaxon
 
+- name: gallery
+  unique: true
+  picture_gallery: true
+
 - name: category_intro
   unique: true
   contents:

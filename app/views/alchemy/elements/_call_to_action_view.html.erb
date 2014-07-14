@@ -1,3 +1,4 @@
+<% cache(element) do %>
 <%= element_view_for(element, class: "large-12 columns") do |el| -%>
   <div class="panel">
     <h4><%= el.render :headline %></h4>
@@ -11,4 +12,5 @@
       </div>
     </div>
   </div>
+<%- end -%>
 <%- end -%>

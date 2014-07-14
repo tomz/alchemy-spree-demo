@@ -1,12 +1,15 @@
 require File.expand_path('../boot', __FILE__)
 
+require 'rails/all'
 # Pick the frameworks you want:
+=begin
 require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
+=end
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -17,6 +20,19 @@ end
 
 module AlchemySpreeDemo
   class Application < Rails::Application
+    
+    config.to_prepare do
+      # Load application's model / class decorators
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+
+      # Load application's view overrides
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/*.rb")) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+    end
+
 
     config.to_prepare do
       # Load application's model / class decorators
@@ -70,7 +86,7 @@ module AlchemySpreeDemo
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
-    config.active_record.whitelist_attributes = true
+#    config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
     config.assets.enabled = true

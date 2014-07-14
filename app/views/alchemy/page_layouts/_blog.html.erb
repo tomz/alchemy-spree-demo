@@ -1,5 +1,6 @@
 <%= render 'shared/header' %>
 
+<% cache(page) do %>
 <div class="row">
   <div class="large-9 columns" role="content">
     <%= render_elements separator: '<hr>' %>
@@ -20,5 +21,6 @@
     </div>
   </aside>
 </div>
+<% end %>
 
 <%= render 'shared/footer' %>

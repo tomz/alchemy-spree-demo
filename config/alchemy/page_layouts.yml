@@ -10,6 +10,7 @@
 
 - name: standard
   elements: [text_block, content_block]
+  autogenerate: [text_block, content_block]
 
 - name: content_page
   cells: [slider]
@@ -35,6 +36,7 @@
 - name: microsite
   cells: [slider]
   elements: [video_slide, image_slide, portrait_image]
+  autogenerate: [portrait_image, image_slide]
 
 - name: external
   redirects_to_external: true

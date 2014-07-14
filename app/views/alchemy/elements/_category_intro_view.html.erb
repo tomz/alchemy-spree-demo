@@ -1,3 +1,4 @@
+<% cache(element) do %>
 <%= element_view_for(element) do |el| -%>
   <%= el.render :image, image_size: '303x393', crop: true %>
   <div class="hide-for-small panel">
@@ -6,4 +7,5 @@
       <%= el.render :text %>
     </h5>
   </div>
+<%- end -%>
 <%- end -%>

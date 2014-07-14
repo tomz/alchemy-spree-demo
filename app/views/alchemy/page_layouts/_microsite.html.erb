@@ -1,25 +1,19 @@
-
-<!-- Navigation -->
-
 <%= render 'shared/microsite_header' %>
-
-<!-- End Top Bar -->
 
 <div class="row">
   <div class="large-12 columns">
 
-    <!-- Content Slider -->
+    <% cache(page) do %>
     <div class="row">
       <div class="large-12">
         <%= render_cell :slider %>
       </div>
     </div>
-    <!-- End Content Slider -->
 
     <div class="row">
       <div class="large-12 columns">
         <div class="row">
-          <!-- Shows -->
+
           <div class="large-4 small-6 columns">
 
             <h4>Upcoming Shows</h4><hr>
@@ -67,17 +61,9 @@
               </div>
             </div>
           </div>
-          <!-- End Shows -->
-
-
-          <!-- Image -->
 
           <%= render_elements only: 'portrait_image' %>
 
-          <!-- End Image -->
-
-
-          <!-- Feed -->
           <% blog = blog_page(@page) %>
           <% if blog %>
           <div class="large-4 small-12 columns">
@@ -106,20 +92,12 @@
           </div>
           <% end %>
 
-          <!-- End Feed -->
-
         </div>
       </div>
     </div>
+    <% end %>
 
-  <!-- End Content -->
-
-
-  <!-- Footer -->
-
-  <%= render 'shared/footer' %>
-
-  <!-- End Footer -->
+    <%= render 'shared/footer' %>
 
   </div>
 </div>

@@ -1,7 +1,6 @@
-<%= element_view_for(element) do |el| -%>
-<article>
-
-  <h3><a href="#"><%= el.render :title %></a></h3>
+<% cache(element) do %>
+<%= element_view_for(element, tag: 'article') do |el| -%>
+  <h3><a href="#"><%= el.render(:title) %></a></h3>
   <h6><%= el.render(:meta_data) % {user: element.creator.name, date: l(element.created_at, format: :date)} %></h6>
 
   <div class="row">
@@ -15,5 +14,5 @@
 
   <%= el.render :body %>
 
-</article>
 <%- end -%>
+<% end %>
