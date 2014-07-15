@@ -30,6 +30,7 @@ gem 'pg'
 
 group :production do
   gem 'rails_12factor'
+  gem 'rack-cors'
 end
 
 group :development do
