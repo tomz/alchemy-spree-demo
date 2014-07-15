@@ -1,4 +1,3 @@
-=begin
 require 'dragonfly/s3_data_store'
 
 pictures_app = Dragonfly.app(:alchemy_pictures)
@@ -23,4 +22,3 @@ attachments_app.configure do
     storage_headers: {'x-amz-acl' => 'public-read'},
     url_scheme: 'https'
 end
-=end
