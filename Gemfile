@@ -31,6 +31,7 @@ gem 'pg'
 group :production do
   gem 'rails_12factor'
   gem 'rack-cors'
+  gem 'unicorn'
 end
 
 group :development do
