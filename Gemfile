@@ -27,11 +27,11 @@ gem 'turbolinks'#, '2.1.0'
 gem "zurb-foundation"
 #gem 'mysql2'
 gem 'pg'
+gem 'unicorn'
 
 group :production do
   gem 'rails_12factor'
   gem 'rack-cors'
-  #gem 'unicorn'
 end
 
 group :development do

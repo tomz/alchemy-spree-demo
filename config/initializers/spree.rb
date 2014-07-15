@@ -10,6 +10,10 @@ Spree.config do |config|
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
   #config.allow_ssl_in_production = false
+  config.use_s3 = true
+  config.s3_bucket = 'intridea-spree'
+  config.s3_access_key = ENV['S3_KEY']
+  config.s3_secret = ENV['S3_SECRET']
 end
 
 Spree.user_class = "Spree::LegacyUser"
