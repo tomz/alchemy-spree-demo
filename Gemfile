@@ -5,7 +5,7 @@ end
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails'#, '~> 4.0.4'
+gem 'rails', '4.1.4'
 
 gem 'alchemy_cms',              github: 'magiclabs/alchemy_cms',            branch: 'master'
 gem 'alchemy-devise',           github: 'magiclabs/alchemy-devise',         branch: 'master'

@@ -404,7 +404,7 @@ DEPENDENCIES
   pg
   pry-rails
   quiet_assets
-  rails
+  rails (= 4.1.4)
   sass-rails (~> 4.0.3)
   spree!
   turbolinks
