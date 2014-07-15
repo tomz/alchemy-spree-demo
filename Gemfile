@@ -11,6 +11,7 @@ gem 'alchemy_cms',              github: 'magiclabs/alchemy_cms',            bran
 gem 'alchemy-devise',           github: 'magiclabs/alchemy-devise',         branch: 'master'
 gem 'alchemy-usermanual',       github: 'magiclabs/alchemy-usermanual',     branch: 'master'
 gem 'dragonfly-s3_data_store'
+gem 'rack-cache', :require => 'rack/cache'
 
 gem "alchemy_spree", github: 'tomz/alchemy_spree', branch: 'master'
 gem "spree", github: 'spree/spree', branch: 'master'
