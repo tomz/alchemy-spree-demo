@@ -1,5 +1,6 @@
-require 'dragonfly/s3_data_store'
 =begin
+require 'dragonfly/s3_data_store'
+
 pictures_app = Dragonfly.app(:alchemy_pictures)
 pictures_app.configure_with(:imagemagick)
 pictures_app.configure do
