@@ -5,7 +5,7 @@ end
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
+gem 'rails', '~> 4.1.4'
 
 gem 'alchemy_cms',              github: 'magiclabs/alchemy_cms',            branch: 'master'
 gem 'alchemy-devise',           github: 'magiclabs/alchemy-devise',         branch: 'master'
@@ -27,6 +27,10 @@ gem 'turbolinks'#, '2.1.0'
 gem "zurb-foundation"
 #gem 'mysql2'
 gem 'pg'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development do
   gem 'capistrano', '~> 2.15'
