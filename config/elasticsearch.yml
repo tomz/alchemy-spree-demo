@@ -12,4 +12,5 @@ test:
 
 production:
   <<: *defaults
-  index: <%= ENV['BONSAI_URL'] || 'spree-production' %>
+  hosts: ["<%= ENV['BONSAI_URL'] %>"]
+  index: spree-production
