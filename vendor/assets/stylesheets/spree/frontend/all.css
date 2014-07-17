@@ -9,4 +9,5 @@
  *= require_self
  *= require_tree .
  *= require spree/elasticsearch
+ *= require spree/fancy
 */

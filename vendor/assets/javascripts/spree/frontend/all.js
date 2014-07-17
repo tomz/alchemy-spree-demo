@@ -12,3 +12,4 @@
 //= require_tree .
 //= require spree/frontend/spree_i18n
 //= require spree/elasticsearch
+//= require spree/fancy

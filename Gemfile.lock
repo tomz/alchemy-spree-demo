@@ -124,7 +124,7 @@ GIT
 
 GIT
   remote: git://github.com/tomz/spree_elasticsearch.git
-  revision: b10c003f050ee321456b36089533e50799ee7cc8
+  revision: dc402caff39b8b34ded39c99a92cd49947cc6d1a
   branch: master
   specs:
     spree_elasticsearch (2.2.0)
@@ -132,6 +132,16 @@ GIT
       settingslogic
       spree_core (~> 2.4.0.beta)
       virtus
+
+GIT
+  remote: git://github.com/tomz/spree_fancy.git
+  revision: 08c5650a3ec4b3139d593beebac18315dee31508
+  specs:
+    spree_fancy (1.3.0)
+      compass-rails
+      deface (~> 1.0.0rc3)
+      jquery-ui-rails
+      spree_core (~> 2.4.0.beta)
 
 GEM
   remote: https://rubygems.org/
@@ -483,6 +493,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   spree!
   spree_elasticsearch!
+  spree_fancy!
   spree_i18n!
   turbolinks
   uglifier (>= 1.3.0)
