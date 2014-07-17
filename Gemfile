@@ -48,4 +48,5 @@ group :development do
   #gem 'sqlite3'
   # gem "rails-i18n-debug"
   gem 'quiet_assets'
+  gem 'letter_opener'
 end

@@ -208,6 +208,7 @@ GEM
       activerecord (>= 3, < 5)
     acts_as_list (0.3.0)
       activerecord (>= 3.0)
+    addressable (2.3.6)
     arel (5.0.1.20140414130214)
     awesome_nested_set (3.0.0.rc.6)
       activerecord (>= 4.0.0, < 5)
@@ -337,6 +338,10 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
+    launchy (2.4.2)
+      addressable (~> 2.3)
+    letter_opener (1.2.0)
+      launchy (~> 2.2)
     magiclabs-userstamp (2.1.0)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -505,6 +510,7 @@ DEPENDENCIES
   compass-rails
   dragonfly-s3_data_store
   jquery-rails
+  letter_opener
   money
   pg
   pry-rails
