@@ -14,7 +14,10 @@ gem 'rack-cache', :require => 'rack/cache'
 
 gem "alchemy_spree", github: 'tomz/alchemy_spree', branch: 'master'
 gem "spree", github: 'spree/spree', branch: 'master'
+gem "spree_i18n", github: 'spree/spree_i18n', branch: 'master'
+
 #gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: 'master'
+gem 'spree_elasticsearch', github: 'tomz/spree_elasticsearch', branch: 'master'
 
 gem 'money'#, '~> 5.1'
 

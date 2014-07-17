@@ -1,0 +1,15 @@
+defaults: &defaults
+  hosts: ["127.0.0.1:9200"]
+  bootstrap: true
+
+development:
+  <<: *defaults
+  index: spree-development
+
+test:
+  <<: *defaults
+  index: spree-test
+
+production:
+  <<: *defaults
+  index: <%= ENV['BONSAI_URL'] || 'spree-production' %>

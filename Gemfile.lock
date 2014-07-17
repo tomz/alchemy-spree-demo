@@ -49,7 +49,7 @@ GIT
 
 GIT
   remote: git://github.com/spree/spree.git
-  revision: dc8e7e43a112801f882cb674f72383071cdfbdc0
+  revision: 4bd68763fded471923998830091f892d7eba1d73
   branch: master
   specs:
     spree (2.4.0.beta)
@@ -76,7 +76,7 @@ GIT
       acts_as_list (= 0.3.0)
       awesome_nested_set (~> 3.0.0.rc.3)
       aws-sdk (= 1.27.0)
-      cancan (~> 1.6.10)
+      cancancan (~> 1.8.4)
       deface (~> 1.0.0)
       ffaker (~> 1.16)
       font-awesome-rails (~> 4.0)
@@ -104,13 +104,34 @@ GIT
       spree_core (= 2.4.0.beta)
 
 GIT
+  remote: git://github.com/spree/spree_i18n.git
+  revision: ad65d7c57e7ca4af7797fba2df7bccba0ea446be
+  branch: master
+  specs:
+    spree_i18n (3.0.0)
+      globalize (~> 4.0.1)
+      i18n_data (~> 0.5.1)
+      rails-i18n (~> 4.0.1)
+      spree_core (~> 2.4.0.beta)
+
+GIT
   remote: git://github.com/tomz/alchemy_spree.git
-  revision: d18a2a16da39b8223289ca0e0279af6808701216
+  revision: 6be341ff99e78183741e7e2fb239fb7f2eb73a69
   branch: master
   specs:
     alchemy_spree (0.3.0.beta)
       alchemy_cms (~> 3.0.0)
-      spree (>= 2.1, < 3.0)
+
+GIT
+  remote: git://github.com/tomz/spree_elasticsearch.git
+  revision: b10c003f050ee321456b36089533e50799ee7cc8
+  branch: master
+  specs:
+    spree_elasticsearch (2.2.0)
+      elasticsearch (~> 1.0.0)
+      settingslogic
+      spree_core (~> 2.4.0.beta)
+      virtus
 
 GEM
   remote: https://rubygems.org/
@@ -167,11 +188,16 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
       uuidtools (~> 2.1)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
     builder (3.2.2)
     cancan (1.6.10)
+    cancancan (1.8.4)
     canonical-rails (0.0.7)
       rails (>= 3.1, < 5.0)
     capistrano (2.15.5)
@@ -186,6 +212,8 @@ GEM
     cocaine (0.5.4)
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -205,6 +233,8 @@ GEM
       colorize (>= 0.5.8)
       nokogiri (~> 1.6.0)
       rails (>= 3.1)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
     devise (3.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -216,9 +246,20 @@ GEM
     dragonfly-s3_data_store (1.0.4)
       dragonfly (~> 1.0)
       fog
+    elasticsearch (1.0.4)
+      elasticsearch-api (= 1.0.4)
+      elasticsearch-transport (= 1.0.4)
+    elasticsearch-api (1.0.4)
+      multi_json
+    elasticsearch-transport (1.0.4)
+      faraday
+      multi_json
+    equalizer (0.0.9)
     erubis (2.7.0)
     excon (0.38.0)
     execjs (2.2.1)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     ffaker (1.24.0)
     fog (1.22.1)
       fog-brightbox
@@ -230,9 +271,9 @@ GEM
       fog-core (~> 1.22)
       fog-json
       inflecto
-    fog-core (1.22.0)
+    fog-core (1.23.0)
       builder
-      excon (~> 0.33)
+      excon (~> 0.38)
       formatador (~> 0.2)
       mime-types
       net-scp (~> 1.1)
@@ -246,12 +287,17 @@ GEM
       activerecord (>= 4.0.0)
     fssm (0.2.10)
     github-markdown (0.6.5)
+    globalize (4.0.2)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     highline (1.6.21)
     hike (1.2.3)
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.9)
+    i18n_data (0.5.1)
+    ice_nine (0.11.0)
     inflecto (0.0.2)
     ipaddress (0.8.0)
     jquery-rails (3.1.0)
@@ -278,6 +324,7 @@ GEM
       i18n (~> 0.6.4)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    multipart-post (2.0.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -326,6 +373,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.4)
       sprockets-rails (~> 2.0)
+    rails-i18n (4.0.2)
+      i18n (~> 0.6)
+      rails (>= 4.0)
+      rails (>= 4.0)
+      rails (>= 4.0)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -355,6 +407,7 @@ GEM
       compass (>= 0.12.2)
     select2-rails (3.5.9)
       thor (~> 0.14)
+    settingslogic (2.0.9)
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -396,6 +449,11 @@ GEM
       activesupport (>= 3.2)
       railties (>= 3.2)
       tzinfo
+    virtus (1.0.2)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0.3)
+      equalizer (~> 0.0.9)
     warden (1.2.3)
       rack (>= 1.0)
     zurb-foundation (4.3.2)
@@ -424,6 +482,8 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 4.0.3)
   spree!
+  spree_elasticsearch!
+  spree_i18n!
   turbolinks
   uglifier (>= 1.3.0)
   unicorn

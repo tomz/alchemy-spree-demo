@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails alchemy-spree-demo: development" uuid="09fb0214-498e-4a44-b3fb-8b57a37b349a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails alchemy-spree-demo: test" uuid="0bc9da5c-f41a-45b4-b509-b96aa86dc724">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails alchemy-spree-demo: production" uuid="18396d14-49dc-4839-8e72-ad035f4eedee">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
