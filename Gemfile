@@ -16,6 +16,8 @@ gem "alchemy_spree", github: 'tomz/alchemy_spree', branch: 'master'
 gem "spree", github: 'spree/spree', branch: 'master'
 gem "spree_i18n", github: 'spree/spree_i18n', branch: 'master'
 gem 'spree_fancy', :github => 'tomz/spree_fancy'
+gem 'spree_gateway', github: 'spree/spree_gateway', branch: 'master'
+gem 'spree_paypal_express', :github => "tomz/better_spree_paypal_express", branch: 'master'
 
 
 #gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: 'master'
