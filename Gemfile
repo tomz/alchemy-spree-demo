@@ -38,7 +38,7 @@ gem 'unicorn'
 
 group :production do
   gem 'dragonfly-s3_data_store'
-  gem 'rails_12factor'
+  #gem 'rails_12factor'
   gem 'rack-cors'
 end
 
