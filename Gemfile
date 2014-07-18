@@ -21,7 +21,7 @@ gem 'spree_paypal_express', :github => "tomz/better_spree_paypal_express", branc
 
 
 #gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: 'master'
-gem 'spree_elasticsearch', github: 'tomz/spree_elasticsearch', branch: 'master'
+#gem 'spree_elasticsearch', github: 'tomz/spree_elasticsearch', branch: 'master'
 
 gem 'money'#, '~> 5.1'
 
